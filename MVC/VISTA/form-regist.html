@@ -1,0 +1,278 @@
+<html lang="es">
+    <head>
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/740970030878949406/867979082632146954/odontologia.png">
+    <title>Registrate</title>
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+              
+       body{
+               margin: 0;
+               padding: 0;
+               font-family: 'Raleway', sans-serif;
+             }
+             .line{
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #bbcd48;
+}
+    .arriba{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .logo{
+            width: 350px;
+            height: 125px;
+            padding: 10px 0 30px 0;
+            margin-left: 40%;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+    header{
+        background-color: #ffffff;
+        width: 100%;
+    }
+         #mnu{
+            z-index: auto;
+            right: 50px;
+             
+        }
+        .menu{
+            width: 100%;
+            margin-left: auto;
+            margin-top: 10px;
+
+        }
+        .menu ul{
+            margin:0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.47);
+        }
+        .menu li{
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #bbcd48;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .menu li:hover{
+            background:rgba(187, 205, 72, 0.43);
+            border: 1px solid #ffff;
+        }
+        .menu li a{
+            display: block;
+            padding: 15px 20px;
+            color: #413e3e;
+            text-decoration: none;
+        }    
+       form {
+                font-family: 'Raleway', sans-serif;
+                width: 100%;
+                max-width: 800px;
+                margin: 10 auto 10 auto;
+                border-radius: 7px;
+                background:#868685be;
+                height: 850px;
+                
+            }
+            .titulo {
+                background: rgba(187, 211, 8, 0.65);
+                font-family: 'Raleway', sans-serif;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-weight: 100;
+                font-size: 30px;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+            }
+            .contenedor {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                color: rgb(255, 255, 255);
+                column-count: 2;
+                margin-top: 2vh;
+            }
+            input {
+                padding:10px 50px;
+                width:90%;
+                margin:5px 0 15px;
+                font-size: 15px;
+                border-radius: 3px;
+                border:none; 
+                background:#bdbdbe;
+                border-bottom:2px solid #e7ee97;
+                outline:none;
+            }
+       
+            select.form-control{
+                
+                padding:10px 50px;
+                width:90%;
+                margin:5px 0 16px;
+                font-size: 15px;
+                border-radius:0;
+                color:#fff;
+                border-radius: 3px;
+                border:none; 
+                background:#bdbdbe;
+                border-bottom:2px solid #e7ee97;
+                display: flex;
+                flex-wrap: wrap; 
+                align-content: flex-start;
+                outline:none;
+}
+            input[type=submit]{
+                display:block;
+                color:#fff;
+                margin:0 auto;
+                margin-left: 25%;
+                margin-top: 2%;
+                padding:12px 80px;
+                margin-bottom: 25;
+                font-size:1.04em;
+                cursor: pointer;
+                border:2px solid #bbd308;
+                border-radius: 30px;
+                outline:none;
+                background:#bbd308;
+                font-weight:500;
+                width:50%;
+                }
+                .contenedor1
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .contenedor2
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+    </style>
+        <script>
+            function seleccionar()
+            {
+              if(document.getElementById('t1').value == "Administrador")
+              {
+                document.getElementById('t13').disabled = false;
+                document.getElementById('t14').disabled = true;
+                document.getElementById('t15').disabled = true;
+              }
+              if(document.getElementById('t1').value == "Doctor")
+              {
+                document.getElementById('t13').disabled = false;
+                document.getElementById('t14').disabled = true;
+                document.getElementById('t15').disabled = false;
+              }
+              if(document.getElementById('t1').value == "Paciente")
+              {
+                document.getElementById('t13').disabled = true;
+                document.getElementById('t14').disabled = false;
+                document.getElementById('t15').disabled = true;
+              }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            
+            <div class="line"></div>
+                    
+            <section class="arriba">
+                <div id="logo">
+                    <img src="https://cdn.discordapp.com/attachments/740970030878949406/867956916343693402/0.png" alt="" class="logo">
+                </div>
+                        
+            </section>
+                <main>
+                    <div id="mnu">
+                    <nav class="menu">
+                         <ul>
+                            <li><a href="Administrador.html">Inicio</a></li>
+                            <li><a href="form-consul-usuario.html">Consultar</a></li>
+                            
+                        </ul>
+                    </nav>
+                    </div>
+                </main>
+                 
+                </header>
+        <form method="POST" action="../CONTROLADOR/ContrRegistro.php">
+        <h2 class="titulo">Registro</h2>
+            <div class="contenedor">
+                <label for="t1" class="form-label">Tipo de Usuario:</label>
+                   <select class="form-control" onchange="seleccionar()" id="t1" required name="1">
+                       <option name="A">Administrador</option>
+                       <option name="D">Doctor</option>
+                       <option name="P" selected>Paciente</option>
+                   </select>
+                <div class="contenedor1">
+                    <label for="t2" class="form-label">Nombres</label>
+                        <input type="text" required class="form-control" id="t2" name="2">
+                    
+                    <label for="t3" class="form-label">Apellidos</label>
+                        <input type="text" required class="form-control" id="t3" name="3">
+                    
+                    <label for="t4" class="form-label">Cedula</label>
+                        <input type="text" required class="form-control" id="t4" name="4">
+                    
+                    <label for="t5" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" required class="form-control" id="t5" name="5">
+                    
+                    <label for="t6" class="form-label">Genero</label>
+                   <select class="form-control" id="t6" required name="6">
+                       <option name="M">Masculino</option>
+                       <option name="F">Femenino</option>
+                   </select>
+                    
+                    <label for="t7" class="form-label">Direccion</label>
+                        <input type="text" required class="form-control" id="t7" name="7">
+                    
+                    <label for="t8" class="form-label">Correo electronico</label>
+                    <input type="email" required class="form-control" id="t8" name="8">
+                    </div>
+                    <div class="contenedor2">
+                        
+                    <label for="t9" class="form-label">Telefono</label>
+                        <input type="text" required class="form-control" id="t9" name="9">
+                    
+                    <label for="t10" class="form-label">Usuario</label>
+                        <input type="text" required class="form-control" id="t10" name="10">
+                    
+                    <label for="t11" class="form-label">Clave</label>
+                        <input type="password" required class="form-control" id="t11" name="11">
+                    
+                    <label for="t12" class="form-label">Estado</label>
+                        <select class="form-control"  id="t12" required name="12">
+                       <option name="A">Activo</option>
+                       <option name="I">Inactivo</option>
+                   </select>
+                    
+                    <label for="t13" class="form-label">Tarjeta profesional</label>
+                    <input type="text" required class="form-control" id="t13" disabled name="13">
+                    
+                    <label for="t14" class="form-label">Ocupacion</label>
+                    <input type="text" required class="form-control" id="t14" disabled name="14">
+                    
+                    <label for="t15" class="form-label">Especialidad</label>
+                    <input type="text" required class="form-control" id="t15" disabled name="15">
+                </div>        
+                    <input type="submit" class="boton" value="Registrar Usuario" required>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<html lang="es">
+    <head>
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/740970030878949406/867979082632146954/odontologia.png">
+    <title>Agenda ya</title>
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+     
+       body{
+               background-image:url(https://cdn.discordapp.com/attachments/740970030878949406/868532435317575700/7b215431-5c40-4c10-9018-ad02c4d0b86c.png);
+               background-repeat: no-repeat;
+               width: auto;
+               height: auto;
+               background-repeat:no-repeat;
+               background-size:cover;
+               background-attachment: fixed;
+               position: relative; 
+               backdrop-filter: blur(10px);
+               font-family: 'Raleway', sans-serif;
+             } 
+             
+       form {
+                 font-family: 'Raleway', sans-serif;
+                width: 100%;
+                max-width: 800px;
+                margin: 10 auto 10 auto;
+                border-radius: 7px;
+                background:#868685be;
+                height: 450px;
+                backdrop-filter: blur(10px);
+            }
+            .titulo {
+                background: rgba(187, 211, 8, 0.65);
+                font-family: 'Raleway', sans-serif;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-weight: 100;
+                font-size: 30px;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+            }
+            .contenedor {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                color: rgb(255, 255, 255);
+                column-count: 2;
+                margin-top: 2vh;
+            }
+            input {
+                padding:10px 50px;
+                width:90%;
+                margin:5px 0 15px;
+                font-size: 15px;
+                border-radius: 3px;
+                border:none; 
+                background:#bdbdbe;
+                border-bottom:2px solid #e7ee97;
+                outline:none;
+            }
+       
+            select.form-control{
+                
+                padding:10px 50px;
+                width:90%;
+                margin:5px 0 16px;
+                font-size: 15px;
+                border-radius:0;
+                color:#fff;
+                border-radius: 3px;
+                border:none; 
+                background:#bdbdbe;
+                border-bottom:2px solid #e7ee97;
+                display: flex;
+                flex-wrap: wrap; 
+                align-content: flex-start;
+                outline:none;
+}
+            input[type=submit]{
+                display:block;
+                color:#fff;
+                margin:0 auto;
+                margin-left: 25%;
+                margin-top: 2%;
+                padding:12px 80px;
+                margin-bottom: 25;
+                font-size:1.04em;
+                cursor: pointer;
+                border:2px solid #bbd308;
+                border-radius: 30px;
+                outline:none;
+                background:#bbd308;
+                font-weight:500;
+                width:50%;
+                }
+                .contenedor1
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .contenedor2
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+    </style>
+    </head>
+    <body>
+        <form method="POST" action="">
+        <h2 class="titulo">Agenda una cita</h2>
+            <div class="contenedor">
+                <div class="contenedor1">
+                
+                    <label for="t1" class="form-label">Cedula</label>
+                        <input type="text" required class="form-control" id="t1">
+                    
+                    <label for="t2" class="form-label">Fecha</label>
+                        <input type="date" required class="form-control" id="t2">
+                
+                    <label for="t3" class="form-label">Hora</label>
+                        <input type="time" required class="form-control" id="t3">
+                    </div>
+                    <div class="contenedor2">
+                        
+                    <label for="t4" class="form-label">Telefono</label>
+                        <input type="text" required class="form-control" id="t4">
+                    
+                    <label for="t5" class="form-label">Usuario</label>
+                        <input type="text" required class="form-control" id="t5">
+                    
+                    <label for="t6" class="form-label">Contraseña</label>
+                        <input type="password" required class="form-control" id="t6">
+                    
+                </div>        
+                    <input type="submit" class="boton" value="Agendar Cita" required>
+            </div>
+        </form>
+    </body>
+</html>
